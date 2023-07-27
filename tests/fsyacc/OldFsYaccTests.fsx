@@ -8,7 +8,7 @@ nuget Fake.Core.Trace //"
 
 #if !FAKE
 #load "./.fake/oldfsyacctests.fsx/intellisense.fsx"
-#r "netstandard" // Temp fix for https://github.com/fsharp/FAKE/issues/1985
+#r "net6.0" // Temp fix for https://github.com/fsharp/FAKE/issues/1985
 #endif
 
 open System

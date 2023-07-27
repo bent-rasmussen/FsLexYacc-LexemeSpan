@@ -32,7 +32,7 @@ let rec copyRecursive dir1 dir2 =
 let referenceBinaries =
     [
         __SOURCE_DIRECTORY__
-        + "/../src/FsLexYacc.Runtime/bin/Release/netstandard2.0/FsLexYacc.Runtime.dll"
+        + "/../src/FsLexYacc.Runtime/bin/Release/net6.0/FsLexYacc.Runtime.dll"
     ]
 
 let githubLink = "http://github.com/fsprojects/FsLexYacc"
@@ -59,7 +59,7 @@ Directory.SetCurrentDirectory(__SOURCE_DIRECTORY__)
 
 // Paths with template/source/output locations
 let bin =
-    __SOURCE_DIRECTORY__ + "/../src/FsLexYacc.Runtime/bin/Release/netstandard2.0"
+    __SOURCE_DIRECTORY__ + "/../src/FsLexYacc.Runtime/bin/Release/net6.0"
 
 let output = __SOURCE_DIRECTORY__ + "/output"
 let contentIn = __SOURCE_DIRECTORY__ + "/content"

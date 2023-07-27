@@ -39,6 +39,6 @@ files
   ../src/FsYacc/fsyacc.fsx ==> src/fsyacc
   ../src/FsLexYacc.Build.Tasks/FsLexYacc.targets ==> src
 dependencies
-  framework: netstandard2.0
+  framework: net6.0
     FsLexYacc.Runtime >= CURRENTVERSION
     FSharp.Core >= LOCKEDVERSION

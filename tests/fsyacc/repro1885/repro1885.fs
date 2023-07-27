@@ -1,4 +1,5 @@
-# 1 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+
+# 1 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
  
 (*
 	Repro of FSharp Bugs 1885, "FSLex doesn't ignore strings in comments"
@@ -41,7 +42,7 @@ let normalizeString (str : string) =
         str
 
 
-# 44 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 45 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
 let trans : uint16[] array = 
     [| 
    (* State 0 *)
@@ -78,45 +79,45 @@ let rec _fslex_dummy () = _fslex_dummy()
 and tokenstream  lexbuf =
   match _fslex_tables.Interpret(0,lexbuf) with
   | 0 -> ( 
-# 51 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 51 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                         LCURLY 
-# 83 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 84 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 1 -> ( 
-# 52 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 52 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                         RCURLY 
-# 88 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 89 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 2 -> ( 
-# 53 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 53 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                          EQUALS 
-# 93 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 94 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 3 -> ( 
-# 55 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 55 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                          STR(lexeme lexbuf) 
-# 98 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 99 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 4 -> ( 
-# 57 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 57 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                               tokenstream lexbuf 
-# 103 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 104 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 5 -> ( 
-# 58 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 58 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                            newline lexbuf; tokenstream lexbuf 
-# 108 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 109 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 6 -> ( 
-# 60 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 60 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                           STR("ParseError" + (lexeme lexbuf)) 
-# 113 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 114 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | 7 -> ( 
-# 61 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fsl"
+# 61 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fsl"
                           EOF 
-# 118 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 119 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"
           )
   | _ -> failwith "tokenstream"
 
-# 3000000 "C:\Users\grzeg\repos\FsLexYacc\tests\fsyacc\repro1885\repro1885.fs"
+# 3000000 "C:\workspaces\_external\FsLexYacc-LexemeSpan\tests\fsyacc\repro1885\repro1885.fs"

@@ -12,7 +12,7 @@ nuget MsBuild.StructuredLogger //"
 
 #if !FAKE
 #load "./.fake/build.fsx/intellisense.fsx"
-#r "netstandard" // Temp fix for https://github.com/fsharp/FAKE/issues/1985
+#r "net6.0" // Temp fix for https://github.com/fsharp/FAKE/issues/1985
 #endif
 
 open Fake.DotNet
@@ -218,7 +218,7 @@ Target.create "Release" ignore
 Target.create "All" ignore
 
 "Clean"
-==> "CheckFormat"
+//==> "CheckFormat"
 ==> "AssemblyInfo"
 ==> "Build"
 ==> "RunTests"

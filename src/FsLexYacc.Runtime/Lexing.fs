@@ -178,6 +178,11 @@ and [<Sealed>] LexBuffer<'char>(filler: LexBufferFiller<'char>) as this =
     static member LexemeString(lexbuf: LexBuffer<char>) =
         System.String(lexbuf.Buffer, lexbuf.BufferScanStart, lexbuf.LexemeLength)
 
+#if NET6_0_OR_GREATER
+    static member LexemeSpan(lexbuf: LexBuffer<char>) =
+        new System.ReadOnlySpan<_>(lexbuf.Buffer, lexbuf.BufferScanStart, lexbuf.LexemeLength)
+#endif
+
     member _.IsPastEndOfStream
         with get () = eof
         and set b = eof <- b
